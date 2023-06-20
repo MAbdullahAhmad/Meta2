@@ -1,0 +1,110 @@
+[type="checkbox"]{
+  display: none;
+}
+
+.modal-btn:checked+label:after,
+.modal-btn:not(:checked)+label:after {
+  position: fixed;
+  z-index: 510;
+
+  top: 30px;
+  right: 30px;
+  width: 60px;
+  height: 60px;
+  box-sizing: border-box;
+  padding-top: 6px;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  line-height: 30px;
+  font-size: 18px;
+
+  background-color: #f3f3f3;
+  color: #000;
+  content: url('../../../iq-test/public/icons/cancel.svg');
+
+  transition: all 200ms linear;
+
+  opacity: 0;
+
+  pointer-events: none;
+
+  transform: translateY(20px);
+}
+
+.modal-btn:checked+label:after {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+.modal {
+  position: fixed;
+
+  display: block;
+  display: -ms-flexbox;
+  display: flex;
+
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+
+  -ms-flex-pack: center;
+  justify-content: center;
+
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 509;
+  overflow-x: hidden;
+  background-color: rgba(31, 32, 41, .75);
+  pointer-events: none;
+  opacity: 0;
+}
+
+.modal-btn:checked~.modal {
+  pointer-events: auto;
+  opacity: 1;
+  transition: all 300ms ease-in-out;
+}
+
+.modal-body {
+  position: relative;
+
+  display: block;
+  width: 100%;
+
+  margin: 0 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+
+  border-radius: 4px;
+
+  overflow: hidden;
+
+  background-color: #fff;
+  -ms-flex-item-align: center;
+  align-self: center;
+  opacity: 0;
+  transform: scale(0.6);
+}
+
+.modal-btn:checked~.modal .modal-body {
+  opacity: 1;
+  transform: scale(1);
+}
+
+@media screen and (max-width: 500px) {
+  .modal-body {
+    width: calc(100% - 40px);
+    padding-bottom: 15px;
+  }
+
+  .modal-body p {
+    padding: 15px 20px 0 20px;
+  }
+}

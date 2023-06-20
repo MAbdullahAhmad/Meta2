@@ -1,0 +1,13 @@
+:root{
+  --dropbox-width: 250px;
+  --dropbox-height: 188px;
+}
+
+.dropbox{
+  margin: 5px;
+}
+
+.droptop{
+  min-width: var(--dropbox-width);
+  min-height: var(--dropbox-height);
+}

@@ -1,0 +1,17 @@
+/*
+ - Config
+*/
+
+:root{
+  --round:    12px;
+  --round-sm: 8px;
+  --round-md: 16px;
+}
+
+/*
+ - Round
+*/
+
+.round    { border-radius: var(--round   ); }
+.round-sm { border-radius: var(--round-sm); }
+.round-md { border-radius: var(--round-md); }

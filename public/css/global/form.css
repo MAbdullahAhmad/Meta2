@@ -1,0 +1,29 @@
+/* Configuration */
+:root{
+  --input-color:       #2b292e;
+  --input-hint-color:  #2b292ea5;
+  --input-size:        16px;
+  --input-height:      19.2px;
+  --input-bg:          var(--gray-light);
+  --input-pad:         20px 24px;
+  --input-rad:         8px;
+}
+
+/* Input Fields */
+.input{
+  padding: var(--input-pad);
+
+  color:            var(--input-color);
+  font-size:        var(--input-size);
+  line-height:      var(--input-height);
+  background-color: var(--input-bg);
+
+  resize: vertical;
+  outline: none;
+  border: none;
+  border-radius: var(--input-rad);
+}
+
+.input::placeholder{
+  color:            var(--input-hint-color);
+}

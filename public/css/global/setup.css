@@ -1,0 +1,40 @@
+/* 
+ - Font
+*/
+@font-face {
+  font-family: comfortaa;
+  src: url('/fonts/comfortaa/Comfortaa_Bold.ttf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: comfortaa;
+  src: url('/fonts/comfortaa/Comfortaa_Regular.ttf');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: comfortaa;
+  src: url('/fonts/comfortaa/Comfortaa_Thin.ttf');
+  font-weight: 200;
+}
+
+/* 
+ - General Styles
+*/
+body{
+  padding: 0;
+  margin: 0;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: comfortaa, cursive, sans-serif;
+}
+.usn{
+  user-select: none;
+}
+
+.list-style-none{
+  list-style: none;
+  padding: 0;
+}

@@ -1,0 +1,216 @@
+/*
+ - Config
+*/
+
+:root{
+  /* Hyperlink */
+  --link:        14px;
+  --link-style:  normal;
+  --link-weight: 700;
+  --link-height: 18.2px;
+
+  /* Buttons */
+  --btn-pad:    10px 24px;
+  --btn:        16px;
+  --btn-style:  normal;
+  --btn-weight: 600;
+  --btn-height: 19.2px;
+  --btn-rad:    6px;
+
+  --btn-md-pad:    13px 28px;
+  --btn-md-height: 19.5px;
+  --btn-md-rad:    12px;
+
+  --btn-md2-pad:    20px 28px;
+  --btn-md2-height: 20px;
+  --btn-md2-rad:    20px;
+
+  --btn-lg-pad:    16px 32px;
+  --btn-lg-height: 20px;
+  --btn-lg-rad:    15px;
+
+  /* Mr-Button */
+  --mr-btn-pad: 12px;
+  --mr-btn-sm: 10px;
+  --mr-btn-xs: 8px;
+
+  /* Icon */
+  --icon-xs: 12px;
+  --icon-sm: 14px;
+  --icon: 16px;
+  --icon-l: 21px;
+  --icon-xl: 25px;
+
+  --img-primary:   invert(51%) sepia(68%) saturate(7487%) hue-rotate(317deg) brightness(92%) contrast(100%); /* #EC297B; */
+  --img-purple:    invert(18%) sepia(46%) saturate(1998%) hue-rotate(259deg) brightness(103%) contrast(96%); /* #69297B; */
+  --img-orange:    invert(60%) sepia(93%) saturate(1547%) hue-rotate(348deg) brightness(103%) contrast(93%); /* #F6921E; */
+  --img-danger:    invert(24%) sepia(66%) saturate(4911%) hue-rotate(353deg) brightness(105%) contrast(93%); /* #f6301e; */
+  --img-secondary: invert(15%) sepia(5%) saturate(768%) hue-rotate(222deg) brightness(96%) contrast(94%); /* #2B292E; */
+  --img-white:     invert(96%) sepia(7%) saturate(0%) hue-rotate(302deg) brightness(109%) contrast(100%); /*#FFFFFF; */
+  --img-light:     invert(100%) sepia(7%) saturate(5132%) hue-rotate(184deg) brightness(119%) contrast(90%); /* #F2F2F2; */
+}
+
+/*
+ - Hyperlink
+*/
+
+.link{
+  display: inline-block;
+  text-decoration: none;
+
+  color:       var(--dull       );
+  font-size:   var(--link       );
+  font-style:  var(--link-style );
+  font-weight: var(--link-weight);
+  line-height: var(--link-height);
+}
+.link:hover,
+.link:active,
+.link.active{
+  color:       var(--secondary);
+}
+
+/* Variations */
+.link.primary{
+  color:       var(--primary);
+}
+
+.link.primary:hover,
+.link.primary:active,
+.link.primary.active{
+  font-weight: bold;
+}
+
+/*
+ - Buttons
+*/
+
+.btn{
+  display: inline-block;
+  padding: var(--btn-pad);
+
+  color:       var(--primary   )!important;
+  font-size:   var(--btn       );
+  font-style:  var(--btn-style );
+  font-weight: var(--btn-weight);
+  line-height: var(--btn-height);
+
+  cursor: pointer;
+  border: 0px solid #0000;
+  border-radius: 6px;
+
+  background-image: linear-gradient(140deg, var(--white) 0%, var(--white) 33%, var(--light) 33%, var(--light) 66%, var(--white) 66%, var(--white) 100%);
+  background-size: 450%;
+  background-position: 100% 0;
+
+  transition: background 1s ease;
+}
+.btn:disabled{
+  opacity: 60%;
+  cursor: unset;
+}
+
+.btn-md{
+  padding:       var(--btn-md-pad);
+  line-height:   var(--btn-md-height);
+  border-radius: var(--btn-md-rad);
+}
+
+.btn-md2{
+  padding:       var(--btn-md2-pad);
+  line-height:   var(--btn-md2-height);
+  border-radius: var(--btn-md2-rad);
+}
+
+.btn-lg{
+  padding:       var(--btn-lg-pad);
+  line-height:   var(--btn-lg-height);
+  border-radius: var(--btn-lg-rad);
+}
+
+.btn-primary   { color: #fff!important; background-image: linear-gradient(140deg, var(--primary  ) 0%, var(--primary   ) 33%, var(--purple   ) 33%, var(--purple   ) 66%, var(--primary   ) 66%, var(--primary   ) 100%); border-color: var(--primary  ); }
+.btn-secondary { color: #fff!important; background-image: linear-gradient(140deg, var(--secondary) 0%, var(--secondary ) 33%, var(--primary  ) 33%, var(--primary  ) 66%, var(--secondary ) 66%, var(--secondary ) 100%); border-color: var(--secondary); }
+.btn-light     { color: #000!important; background-image: linear-gradient(140deg, var(--light    ) 0%, var(--light     ) 33%, var(--white    ) 33%, var(--white    ) 66%, var(--light     ) 66%, var(--light     ) 100%); border-color: var(--light    ); }
+
+/*
+ - Mr-Button
+*/
+.mr-btn{
+  display: inline-block;
+  padding: var(--mr-btn-pad);
+
+  color:       var(--secondary );
+  font-size:   var(--btn       );
+  font-style:  var(--btn-style );
+  font-weight: var(--btn-weight);
+  line-height: var(--btn-height);
+
+  cursor: pointer;
+  border: 0px solid #0000;
+  border-radius: 6px;
+
+  background-color: var(--lighter);
+  transition: background .4s ease;
+}
+.mr-btn:hover{
+  background-color: var(--light);
+}
+.mr-btn-sm{
+  padding: var(--mr-btn-sm);
+}
+.mr-btn-xs{
+  padding: var(--mr-btn-xs);
+}
+
+/*
+ - Icons
+*/
+
+.icon,
+.icon-l,
+.icon-xl{
+  display: inline-block;
+  height: auto;
+}
+
+.icon-xs{
+  width: var(--icon-xs);
+  max-height: calc(2 * var(--icon-xs));
+}
+
+.icon-sm{
+  width: var(--icon-sm);
+  max-height: calc(2 * var(--icon-sm));
+}
+
+.icon{
+  width: var(--icon);
+  max-height: calc(2 * var(--icon));
+}
+
+.icon-l{
+  width: var(--icon-l);
+  max-height: calc(2 * var(--icon-l));
+}
+
+.icon-xl{
+  width: var(--icon-xl);
+  max-height: calc(2 * var(--icon-xl));
+}
+
+/* 
+ - Image Colors
+*/
+
+.img-primary   { filter: var(--img-primary   ); }
+.img-purple    { filter: var(--img-purple    ); }
+.img-orange    { filter: var(--img-orange    ); }
+.img-danger    { filter: var(--img-danger    ); }
+.img-secondary { filter: var(--img-secondary ); }
+.img-white     { filter: var(--img-white     ); }
+.img-light     { filter: var(--img-light     ); }
+
+
+.stats-box{
+  min-height: 280px;
+}

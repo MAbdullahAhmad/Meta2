@@ -1,0 +1,21 @@
+.loading-active{
+  border-radius: 10px;
+  /* border: 1px solid var(--light); */
+
+
+  background-image: linear-gradient(140deg, var(--white) 0%, var(--white) 33%, var(--light) 33%, var(--light) 66%, var(--white) 66%, var(--white) 100%);
+  background-size: 550%;
+  background-position: 100% 0;
+  background-repeat: no-repeat;
+
+  animation: loading-animation 1.3s ease infinite;
+}
+
+@keyframes loading-animation {
+  0% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 100%;
+  }
+}

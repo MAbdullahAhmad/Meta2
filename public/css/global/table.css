@@ -1,0 +1,73 @@
+/* Config */
+:root{
+  --table-gap:     15px;
+  --table-size:    14px;
+  --table-height:  130%;
+  --table-spacing: 0.2px;
+
+  --table-th-weight: 700;
+  --table-td-weight: 400;
+}
+
+/* Head & Body */
+.table th,
+.table td,
+.thead > *,
+.tbody > * > *{
+  padding:        var(--table-gap    );
+
+  font-size:      var(--table-size   );
+  line-height:    var(--table-height );
+  letter-spacing: var(--table-spacing);
+}
+
+/* Head */
+.table th,
+.thead > *{
+  font-weight: var(--table-th-weight);
+}
+
+/* Body */
+.table td,
+.tbody > * > *{
+  font-weight: var(--table-td-weight);
+}
+
+/* C-THead */
+.thead{
+  display: flex;
+}
+
+/* C-Head */
+.thead > *{
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* C-TBody */
+.tbody > *{
+  display: flex;
+}
+/* C-Body */
+.tbody > * > *{
+  display: inline-block;
+  flex-basis: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+/* Lined */
+.table-lined .th,
+.table-lined .td,
+.table-lined .thead > *,
+.table-lined .tbody > * > *{
+  border-bottom: 1px solid var(--t-secondary);
+}
+
+/* Lined */
+.table-hover tr:hover,
+.table-hover .tr:hover,
+.table-hover .tbody > *:hover{
+  background-color: var(--t-secondary);
+}
